@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamour Beauty Salon</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8fb;
+            color: #513746;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            color: #c74478;
+            font-family: Georgia, serif;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #513746;
+            margin: 8px;
+        }
+
+        nav a:hover {
+            color: #d94e85;
+        }
+
+        .hero {
+            min-height: 400px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, #f9dce8, #f9dce8aa),
+                url("https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 550px;
+        }
+
+        .hero h2 {
+            color: #78344f;
+            font-family: Georgia, serif;
+            font-size: 45px;
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .hero p {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d94e85;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ad3265;
+        }
+
+        section {
+            padding: 50px 7%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #78344f;
+            font-family: Georgia, serif;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            margin-bottom: 25px;
+            color: #806b76;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #f1d5e1;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 4px 12px #f0dfe6;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            color: #78344f;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #806b76;
+        }
+
+        .price {
+            display: block;
+            color: #c74478;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .gallery-section {
+            background: #fdebf2;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid white;
+        }
+
+        .booking {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .booking-info p {
+            margin: 18px 0;
+        }
+
+        form {
+            background: white;
+            padding: 25px;
+            border: 1px solid #f1d5e1;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e3cbd5;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        textarea {
+            min-height: 90px;
+        }
+
+        footer {
+            background: #bd3e75;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer h2 {
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .booking {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .services, .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            header {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌸 Glamour Beauty Salon</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#appointment">Appointment</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p>BEAUTY • CARE • CONFIDENCE</p>
+
+            <h2>Welcome to<br>
+                Glamour Beauty Salon
+            </h2>
+
+            <p>
+                Enhance your natural beauty with our
+                professional beauty services.
+                Feel confident, relaxed, and beautiful!
+            </p>
+
+            <a class="btn" href="#services">
+                Explore Our Services
+            </a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Our Salon</h2>
+
+        <p class="subtitle">
+            We help you feel your best for everyday moments
+            and special occasions.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>Beauty Services &amp; Prices</h2>
+
+        <p class="subtitle">
+            Choose your favorite beauty service.
+        </p>
+
+        <div class="services">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500"
+                     alt="Makeup products">
+                <h3>Party Makeup</h3>
+                <p>Beautiful makeup for parties and events.</p>
+                <span class="price">Rs. 3,000+</span>
+                <a class="btn" href="#appointment">Book Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500"
+                     alt="Wedding celebration">
+                <h3>Bridal Makeup</h3>
+                <p>A beautiful look for your wedding day.</p>
+                <span class="price">Rs. 15,000+</span>
+                <a class="btn" href="#appointment">Book Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?w=500"
+                     alt="Hair styling">
+                <h3>Hair Styling</h3>
+                <p>Beautiful hairstyles for every occasion.</p>
+                <span class="price">Rs. 2,000+</span>
+                <a class="btn" href="#appointment">Book Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500"
+                     alt="Facial skincare">
+                <h3>Facial &amp; Skincare</h3>
+                <p>Refreshing facial and skincare services.</p>
+                <span class="price">Rs. 2,500+</span>
+                <a class="btn" href="#appointment">Book Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500"
+                     alt="Nail art">
+                <h3>Manicure &amp; Pedicure</h3>
+                <p>Nail care and beautiful nail designs.</p>
+                <span class="price">Rs. 1,500+</span>
+                <a class="btn" href="#appointment">Book Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500"
+                     alt="Beauty accessories">
+                <h3>Mehndi Design</h3>
+                <p>Traditional designs for celebrations.</p>
+                <span class="price">Rs. 1,500+</span>
+                <a class="btn" href="#appointment">Book Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+        <h2>Our Beauty Gallery</h2>
+
+        <p class="subtitle">
+            Explore beauty and styling inspiration.
+        </p>
+
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600"
+                 alt="Makeup look">
+
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600"
+                 alt="Cosmetics collection">
+
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600"
+                 alt="Salon interior">
+
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600"
+                 alt="Hair styling">
+        </div>
+    </section>
+
+    <section class="booking" id="appointment">
+
+        <div class="booking-info">
+            <h2>Book an Appointment</h2>
+
+            <p>
+                Complete the form to request your
+                preferred salon service.
+            </p>
+
+            <p>☎ Phone: Add your phone number</p>
+            <p>📍 Location: Add your salon address</p>
+            <p>🕒 Monday–Saturday, 10 AM–8 PM</p>
+        </div>
+
+        <form action="#" method="get">
+
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text"
+                   placeholder="Enter your name" required>
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel"
+                   placeholder="Enter your phone number" required>
+
+            <label for="service">Select Service</label>
+            <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option>Party Makeup</option>
+                <option>Bridal Makeup</option>
+                <option>Hair Styling</option>
+                <option>Facial &amp; Skincare</option>
+                <option>Manicure &amp; Pedicure</option>
+                <option>Mehndi Design</option>
+            </select>
+
+            <label for="date">Appointment Date</label>
+            <input id="date" name="date" type="date" required>
+
+            <label for="message">Additional Message</label>
+            <textarea id="message" name="message"
+                      placeholder="Your special request"></textarea>
+
+            <button class="btn" type="submit">
+                Request Appointment
+            </button>
+
+        </form>
+    </section>
+
+    <footer id="contact">
+        <h2>🌸 Glamour Beauty Salon</h2>
+        <p>Because you deserve to feel beautiful.</p>
+        <p>Contact: Add your phone number</p>
+        <p>© 2026 Glamour Beauty Salon. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
